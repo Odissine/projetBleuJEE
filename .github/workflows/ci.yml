@@ -1,0 +1,11 @@
+name: TestOperationMath
+on: [push]
+jobs:
+  test:
+    runs-on: Windows
+    steps:
+      - uses: actions/checkout@v2
+      - run : java --version
+      - run : pwd
+      - run: mvn install
+      - run: mvn test
