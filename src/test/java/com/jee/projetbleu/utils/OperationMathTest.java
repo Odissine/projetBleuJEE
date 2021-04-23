@@ -1,10 +1,10 @@
-package com.jee.projetbleu.test;
+package com.jee.projetbleu.utils;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import com.jee.projetbleu.utils.OperationMath;
 import org.junit.jupiter.api.Test;
 
-class TestOperationMath {
+import static org.junit.jupiter.api.Assertions.*;
+
+class OperationMathTest {
 
   private final OperationMath operationMath = new OperationMath();
 

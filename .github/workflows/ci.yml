@@ -5,4 +5,4 @@ jobs:
     runs-on: Windows
     steps:
       - uses: actions/checkout@v2
-      - run: TestOperationMath.java
+      - run: mvn install test
