@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:400,500,600,700,800,900&display=swap');
+
+/* Pour le bouton Deconnection uniquement */
+@font-face {
+    family: 'FontAwesome';
+    src: url('FontAwesome.otf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+body {
+    font-family: Arial;
+    font-size: 16px;
+    background-color: #333;
+    color:#eee;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+div {
+    margin:5px 0;
+}
+span.error {
+    color: #ff0000;
+}
+a {
+    text-decoration: none;
+}
+a:active {
+    text-decoration: none;
+}
+
+/* Spec pour le bouton de deconnection */
+input.disconnect {
+    font-family: FontAwesome;
+    position: relative;
+    width:50px !important;
+    height:50px !important;
+    background: #333;
+    line-height: 20px;
+    text-align: center;
+    margin: 0 4px;
+    color: crimson !important;
+    font-size: 12px;
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: -2px -2px 6px rgba(255,255,255,0.1),
+    2px 2px 6px rgba(0,0,0,0.8);
+    text-shadow: 0 0 5px crimson,
+    0 0 20px crimson;
+}
+
+/* CONTAINER PRINCIPAL (LOGIN + DETAILS + LISTE) */
+.login , .details, .liste {
+    position: relative;
+    padding:40px 40px 60px;
+    background: #333;
+    border-radius: 10px;
+    box-shadow: -5px -5px 10px rgba(255,255,255,0.1),
+                5px 5px 15px rgba(0,0,0,0.5);
+}
+/* Fenêtre d'identification */
+.login {
+    width: 380px;
+    text-align: center;
+}
+/* Fenêtre pour afficher le détails des employés */
+.details {
+    width: 600px;
+    text-align: left;
+    margin:50px 0;
+}
+/* Fenêtre pour afficher la liste des employés */
+.liste {
+    width: 90%;
+    text-align: left;
+    margin:50px 0;
+}
+/* Titre Identification + Détails */
+.login h1, .details h1, .liste h1 {
+    color:#c7c7c7;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.details h1 span {
+    color: darkorange;
+}
+
+/* Container avec les labels + input + tableau */
+.login .input, .details .input {
+    margin-top: 40px;
+}
+.login .input {
+    text-align: center;
+}
+.details .input {
+    text-align: left;
+}
+/* Sous titre - Séparation des champs Tel + Adresse */
+.details .input div span {
+    font-weight: 500;
+    font-size: 14px;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: darkorange;
+    margin-top:20px;
+    display: block;
+}
+/* DIV <INPUT + LABEL> */
+.login .input .inputBox, .details .input .inputBox {
+    margin-top: 20px;
+}
+/* LABEL */
+.login .input .inputBox label, .details .input .inputBox label {
+    display: block;
+    color: #868686;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+.details .input .inputBox label {
+    width: 150px;
+    display: inline-block;
+}
+/* INPUT TEXT */
+.liste .input .inputBox input, .login .input .inputBox input, .details .input .inputBox input {
+    width: 200px;
+    height: 50px;
+    background: #333333;
+    border: none;
+    outline: none;
+    border-radius: 40px;
+    padding: 5px 15px;
+    color:#fff;
+    font-size: 18px;
+    color: #03a9f4;
+    box-shadow: inset -2px -2px 6px rgba(255,255,255,0.1),
+    inset 2px 2px 6px rgba(0,0,0,0.5);
+    margin-right: 10px;
+}
+.login .input .inputBox input {
+    width: 100%;
+}
+.details .input .inputBox input {
+    width: 68%;
+    display: inline-block;
+    border-radius: 50px;
+}
+/* INPUT SUBMIT (BOUTON) + Spécificité pour certains boutons */
+.details .input .inputBox input[type="submit"] {
+    width:40%;
+}
+.login .input .inputBox input[type="submit"], .liste .input .inputBox input[type="submit"], .details .input .inputBox input[type="submit"] {
+    cursor: pointer;
+    margin-top: 20px;
+    box-shadow: -2px -2px 6px rgba(255,255,255,0.1),
+                2px 2px 6px rgba(0,0,0,0.8);
+}
+.details .input .inputBox input[type="submit"].modifier {
+    color: darkorange;
+    background: #3D2525;
+}
+.details .input .inputBox input[type="submit"].modifier:active {
+    color: saddlebrown;
+}
+.liste .input .inputBox input[type="submit"].supprimer {
+    color: crimson;
+}
+.liste .input .inputBox input[type="submit"].disconnect {
+    color: crimson;
+    width: 50px;
+    height:50px;
+    border-radius: 50px;
+}
+.liste .input .inputBox input[type="submit"].supprimer:active {
+    color: darkred;
+}
+.login .input .inputBox input[type="submit"]:active, .liste .input .inputBox input[type="submit"]:active, .details .input .inputBox input[type="submit"]:active {
+    color:#006c9c;
+    margin-top: 20px;
+    box-shadow: inset -2px -2px 6px rgba(255,255,255,0.1),
+                inset 2px 2px 6px rgba(0,0,0,0.8);
+}
+.login .input .inputBox input[type="submit"]:hover, .liste .input .inputBox input[type="submit"]:hover, .details .input .inputBox input[type="submit"]:hover {
+    background: #292929;
+}
+.login .input .inputBox input::placeholder {
+    color:#555;
+    font-size: 18px;
+}
+
+/* CSS POUR LE BOUTON RADIO DE LA LISTE DES EMPLOYE */
+.liste label.radio input  {
+    appearance: none;
+    -webkit-appearance: none;
+    cursor: pointer;
+}
+/* Design du label qui remplace l'affichage du input radio qui est masqué */
+.liste label.radio .fa {
+    position: relative;
+    width:20px;
+    height:20px;
+    background: #333;
+    line-height: 20px;
+    text-align: center;
+    margin: 0 4px;
+    color: #333333;
+    font-size: 12px;
+    border-radius: 50%;
+    cursor:pointer;
+    box-shadow: inset -1px -1px 3px rgba(255,255,255,0.1),
+                inset 1px 1px 3px rgba(0,0,0,1);
+}
+
+.liste label.radio .fa:hover {
+    color:#444444;
+    box-shadow: inset -1px -1px 3px rgba(255,255,255,0.1),
+                inset 1px 1px 3px rgba(0,0,0,1);
+}
+.liste label.radio input:checked ~ .fa {
+    color:darkorange;
+    box-shadow: inset -1px -1px 3px rgba(255,255,255,0.1),
+                inset 1px 1px 3px rgba(0,0,0,1);
+    text-shadow: 0 0 5px darkorange,
+                 0 0 20px darkorange;
+    transition: color 1s, text-shadow 1s, box-shadow 1s;
+}
+
+/* LE TABLEAU DES EMPLOYES en DIV */
+div.darkTable {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    background-color: #333333;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+}
+.divTable.darkTable .divTableCell, .divTable.darkTable .divTableHead {
+    border: 1px solid #333333;
+    padding: 10px 2px;
+}
+.divTable.darkTable .divTableBody .divTableCell {
+    font-size: 14px;
+    color: #E6E6E6;
+}
+.divTable.darkTable .divTableRow:nth-child(even) {
+    background-image: linear-gradient(to right, #333333,#222222,#333333);
+}
+.divTable.darkTable .divTableRow:nth-child(even):hover {
+    background: #444444;
+    transition: background-color 100ms;
+}
+.divTable.darkTable .divTableHeading {
+    background: #333333;
+}
+.divTable.darkTable .divTableHeading .divTableHead {
+    font-size: 16px;
+    font-weight: bold;
+    color: darkorange;
+    text-align: left;
+}
+.darkTable .tableFootStyle {
+    font-size: 14px;
+}
+.divTableRow {
+    border:none;
+}
+/* DivTable.com */
+.divTable{ display: table; }
+.divTableRow { display: table-row; }
+.divTableRow:hover {
+    background: #444444;
+    transition: background-color 100ms;
+}
+.divTableHeading { display: table-header-group;}
+.divTableCell, .divTableHead { display: table-cell;}
+.divTableHeading { display: table-header-group;}
+.divTableFoot { display: table-footer-group;}
+.divTableBody { display: table-row-group;}
