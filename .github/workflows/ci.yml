@@ -5,5 +5,7 @@ jobs:
     runs-on: Windows
     steps:
       - uses: actions/checkout@v2
+      - run : java --version
+      - run : pwd
       - run: mvn install
       - run: mvn test
