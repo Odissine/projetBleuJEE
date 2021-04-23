@@ -1,11 +1,9 @@
 package com.jee.projetbleu.utils;
 
 import org.junit.jupiter.api.Test;
-
 import static org.junit.jupiter.api.Assertions.*;
 
-class OperationMathTest {
-
+class TestOperationMath {
   private final OperationMath operationMath = new OperationMath();
 
   @Test
